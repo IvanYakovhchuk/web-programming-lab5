@@ -3,20 +3,28 @@ const imgInputForm = document.getElementById("img-input-form");
 const mobileMediaQuery = window.matchMedia('(max-device-width: 768px) and (hover: none) and (pointer: coarse)');
 
 
-
+let count2 = 0;
 if (mobileMediaQuery.matches) {
     y.addEventListener("touchend", function() {
-        if (window.getSelection().toString()) {
+        count2++;
+        if (window.getSelection().toString() && count2 % 2 != 0) {
             imgInputForm.style.display = "flex";
             imgInputForm.style.flexDirection = "column";
+        }
+        else if (window.getSelection().toString() && count2 % 2 == 0) {
+            imgInputForm.style.display = "none";
         }
     });
 }
 else  {
     y.addEventListener("mouseup", function() {
-        if (window.getSelection().toString()) {
+        count2++;
+        if (window.getSelection().toString() && count2 % 2 != 0) {
             imgInputForm.style.display = "flex";
             imgInputForm.style.flexDirection = "column";
+        }
+        else if (window.getSelection().toString() && count % 2 == 0) {
+            imgInputForm.style.display = "none";
         }
     });
 }
@@ -25,11 +33,6 @@ const addImageButton = document.getElementById("addImageButton");
 const imageUrlInput = document.getElementById("imageUrl");
 
 addImageButton.addEventListener("click", function() {
-    if (typeof(Storage) !== "undefined") {
-        // Використовуємо localStorage
-    } else {
-        alert("Local Storage не підтримується вашим браузером.");
-    }
     const imageUrl = imageUrlInput.value.trim();
     if (imageUrl) {
         let images = JSON.parse(localStorage.getItem("images")) || [];

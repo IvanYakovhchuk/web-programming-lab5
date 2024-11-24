@@ -1,5 +1,5 @@
 const f2Button = document.getElementById("f2");
-const leftContainer = document.querySelector(".left");
+const leftContainer = document.getElementById("nums-imgs-input");
 let count1 = 0;
 let areaElement;
 
