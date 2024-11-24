@@ -217,7 +217,6 @@
     display: flex;
     flex-direction: row;
     flex: 6;
-    border: 0.1vh solid #000;
     max-width: 100%;
   }
   
