@@ -200,7 +200,7 @@
   body{
     margin: 0;
     padding: 0;
-    max-height: 100dvh;
+    max-height: 100vh;
     box-sizing: border-box;
     overflow-x: hidden;
   }
@@ -210,6 +210,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    min-width: min-content;
     box-sizing: border-box;
   }
   
@@ -217,7 +218,7 @@
     display: flex;
     flex-direction: row;
     flex: 6;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
     max-width: 100%;
   }
   
@@ -226,11 +227,11 @@
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 1dvh;
-    font-size: 1.9dvh;
+    padding: 1vh;
+    font-size: 1.9vh;
     text-align: left;
     background-color: #fdd;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
     box-sizing: border-box;
   }
   
@@ -247,27 +248,27 @@
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 1dvh;
+    padding: 1vh;
     text-align: justify;
-    font-size: 1.4dvh;
+    font-size: 1.4vh;
     background-color: #d0e7ff;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
     box-sizing: border-box;
   }
   
   .x {
-    min-width: 7dvh;
-    height: 4dvh;
+    min-width: 7vh;
+    height: 4vh;
     width: auto;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 2dvh;
-    padding: 1dvh;
-    font-size: 1.3dvh;
+    margin: 0 2vh;
+    padding: 1vh;
+    font-size: 1.3vh;
     background-color: #ffffff;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
     box-sizing: border-box;
   }
   
@@ -292,12 +293,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1dvh;
+    padding: 1vh;
     text-align: right;
-    font-size: 1.2dvh;
+    font-size: 1.2vh;
     flex: 1;
     background-color: #e5f2c9;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
   }
   
   #nums-imgs-input {
@@ -306,22 +307,22 @@
     justify-content: center;
     align-items: center;
     flex: 8;
-    padding: 1dvh 1dvh;
+    padding: 1vh 1vh;
     text-align: justify;
-    font-size: 1.7dvh;
+    font-size: 1.7vh;
     background-color: #ffffff;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
     box-sizing: border-box;
   }
   
   #nums-imgs-input input {
-    margin: 0.5dvh;
-    width: 20dvh;
-    min-height: 1.5dvh;
-    max-height: 1.5dvh;
+    margin: 0.5vh;
+    width: 20vh;
+    min-height: 1.5vh;
+    max-height: 1.5vh;
   }
   #nums-imgs-input label {
-    font-size: 1.7dvh;
+    font-size: 1.7vh;
   }
 
   #img-input-form {
@@ -337,7 +338,7 @@
     justify-content: center;
     flex: 1;
     height: 100%;
-    font-size: 1.9dvh;
+    font-size: 1.9vh;
     background-color: #dff0d8;
     border: 0.1dvh solid #000;
   }
@@ -354,23 +355,23 @@
     justify-content: space-between;
     align-items: center;
     flex: 1;
-    font-size: 1.5dvh;
+    font-size: 1.5vh;
     background-color: #d0e7ff;
-    border: 0.1dvh solid #000;
+    border: 0.1vh solid #000;
   }
   
   .y {
-    min-width: 7dvh;
+    min-width: 7vh;
     height: 2dvh;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1dvh;
-    margin-left: 5dvh;
-    font-size: 1.3dvh;
+    margin: 1vh;
+    margin-left: 5vh;
+    font-size: 1.3vh;
     background-color: #ffffff;
-    padding: 1dvh;
+    padding: 1vh;
     border: 0.1dvh solid #000;
   }
   
@@ -400,6 +401,7 @@
     background-color: #512da8;
     color: #fff;
     border: 0.1vw solid #000;
+    border-radius: 1.3vh;
     text-align: center;
   }
 
