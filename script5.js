@@ -1,12 +1,25 @@
 const y = document.getElementById("y");
 const imgInputForm = document.getElementById("img-input-form");
 
-y.addEventListener("mouseup", function() {
-    if (window.getSelection().toString()) {
-        imgInputForm.style.display = "flex";
-        imgInputForm.style.flexDirection = "column";
-    }
-});
+const desktopMediaQuery = window.matchMedia('min-device-width: 768px');
+const mobileMediaQuery = window.matchMedia('(max-device-width: 768px) and (hover: none) and (pointer: coarse)');
+
+if (desktopMediaQuery.matches) {
+    y.addEventListener("mouseup", function() {
+        if (window.getSelection().toString()) {
+            imgInputForm.style.display = "flex";
+            imgInputForm.style.flexDirection = "column";
+        }
+    });
+}
+else if (mobileMediaQuery.matches) {
+    y.addEventListener("touchend", function() {
+        if (window.getSelection().toString()) {
+            imgInputForm.style.display = "flex";
+            imgInputForm.style.flexDirection = "column";
+        }
+    });
+}
 
 const addImageButton = document.getElementById("addImageButton");
 const imageUrlInput = document.getElementById("imageUrl");
