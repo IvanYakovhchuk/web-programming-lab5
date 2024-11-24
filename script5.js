@@ -25,6 +25,11 @@ const addImageButton = document.getElementById("addImageButton");
 const imageUrlInput = document.getElementById("imageUrl");
 
 addImageButton.addEventListener("click", function() {
+    if (typeof(Storage) !== "undefined") {
+        // Використовуємо localStorage
+    } else {
+        alert("Local Storage не підтримується вашим браузером.");
+    }
     const imageUrl = imageUrlInput.value.trim();
     if (imageUrl) {
         let images = JSON.parse(localStorage.getItem("images")) || [];
