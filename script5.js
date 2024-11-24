@@ -1,19 +1,19 @@
 const y = document.getElementById("y");
 const imgInputForm = document.getElementById("img-input-form");
-
-const desktopMediaQuery = window.matchMedia('min-device-width: 768px');
 const mobileMediaQuery = window.matchMedia('(max-device-width: 768px) and (hover: none) and (pointer: coarse)');
 
-if (desktopMediaQuery.matches) {
-    y.addEventListener("mouseup", function() {
+
+
+if (mobileMediaQuery.matches) {
+    y.addEventListener("touchend", function() {
         if (window.getSelection().toString()) {
             imgInputForm.style.display = "flex";
             imgInputForm.style.flexDirection = "column";
         }
     });
 }
-else if (mobileMediaQuery.matches) {
-    y.addEventListener("touchend", function() {
+else  {
+    y.addEventListener("mouseup", function() {
         if (window.getSelection().toString()) {
             imgInputForm.style.display = "flex";
             imgInputForm.style.flexDirection = "column";
